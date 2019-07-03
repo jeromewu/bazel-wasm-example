@@ -14,9 +14,9 @@ cc_toolchain_suite(
 filegroup(
     name = "all",
     srcs = [
-        "emcc.sh",
-        "@emscripten_clang//:all",
-        "@emscripten_toolchain//:all",
+#        "emcc.sh",
+#        "@emscripten_clang//:all",
+#        "@emscripten_toolchain//:all",
     ],
 )
 
