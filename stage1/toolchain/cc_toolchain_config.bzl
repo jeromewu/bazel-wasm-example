@@ -4,11 +4,11 @@ def _impl(ctx):
     tool_paths = [
         tool_path(
             name = "gcc",
-            path = "emcc.sh",
+            path = "/usr/local/bin/emcc",
         ),
         tool_path(
             name = "ld",
-            path = "emcc.sh",
+            path = "/usr/local/bin/emcc",
         ),
         tool_path(
             name = "ar",
