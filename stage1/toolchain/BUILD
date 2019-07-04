@@ -2,22 +2,15 @@ package(default_visibility = ["//visibility:public"])
 
 load(":cc_toolchain_config.bzl", "cc_toolchain_config")
 
-cc_toolchain_config(name = "asmjs_toolchain_config")
+cc_toolchain_config(
+    name = "asmjs_toolchain_config"
+)
 
 cc_toolchain_suite(
     name = "emscripten",
     toolchains = {
         "asmjs": ":asmjs_toolchain",
     },
-)
-
-filegroup(
-    name = "all",
-    srcs = [
-#        "emcc.sh",
-#        "@emscripten_clang//:all",
-#        "@emscripten_toolchain//:all",
-    ],
 )
 
 cc_toolchain(
@@ -31,4 +24,14 @@ cc_toolchain(
    objcopy_files = ":empty",
    strip_files = ":empty",
    supports_param_files = 0,
+)
+
+filegroup(
+    name = "all",
+    srcs = [
+        "emcc.sh",
+        "@emscripten//:all",
+        #"@emscripten_toolchain//:all",
+        #"@emscripten_clang//:all",
+    ],
 )

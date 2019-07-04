@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin/bash -x
 set -euo pipefail
-python external/emscripten_toolchain/emcc.py "$@"
+/usr/local/bin/emcc "$@"
